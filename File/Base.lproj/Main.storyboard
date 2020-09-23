@@ -17,10 +17,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rVx-4O-cOr">
-                                <rect key="frame" x="0.0" y="44" width="414" height="359"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="410"/>
                                 <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zCT-ya-ugg">
+                                        <rect key="frame" x="20" y="20" width="374" height="32"/>
+                                        <segments>
+                                            <segment title="UserDefault"/>
+                                            <segment title="FileManager"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="eE3-go-PN5"/>
+                                        </connections>
+                                    </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ra5-6t-UqJ">
-                                        <rect key="frame" x="20" y="20" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="71" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="nSK-DA-uyI"/>
                                         </constraints>
@@ -29,12 +39,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uya-r4-9Jf">
-                                        <rect key="frame" x="20" y="90" width="374" height="43"/>
+                                        <rect key="frame" x="20" y="141" width="374" height="43"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxO-Pc-jud">
-                                        <rect key="frame" x="20" y="153" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="204" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="QIP-N5-vAo"/>
                                         </constraints>
@@ -43,12 +53,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BPK-aj-j3h">
-                                        <rect key="frame" x="20" y="223" width="374" height="43"/>
+                                        <rect key="frame" x="20" y="274" width="374" height="43"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceh-er-XDr">
-                                        <rect key="frame" x="20" y="286" width="374" height="53"/>
+                                        <rect key="frame" x="20" y="337" width="374" height="53"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <state key="normal" title="Write"/>
                                         <connections>
@@ -70,6 +80,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" image="pencil" catalog="system" id="fFW-bV-ubw"/>
                     <connections>
+                        <outlet property="labelKey" destination="ra5-6t-UqJ" id="Dhb-2x-kns"/>
+                        <outlet property="labelValue" destination="BxO-Pc-jud" id="Baq-rY-zyZ"/>
+                        <outlet property="segmentedControl" destination="zCT-ya-ugg" id="002-jh-mIz"/>
                         <outlet property="textFieldKey" destination="uya-r4-9Jf" id="YId-nF-1Au"/>
                         <outlet property="textFieldValue" destination="BPK-aj-j3h" id="dvD-ww-MQs"/>
                     </connections>
@@ -105,10 +118,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="odd-hG-GXR">
-                                <rect key="frame" x="0.0" y="44" width="414" height="333"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="384"/>
                                 <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bKO-8h-uUp">
+                                        <rect key="frame" x="20" y="20" width="374" height="32"/>
+                                        <segments>
+                                            <segment title="UserDefault"/>
+                                            <segment title="FileManager"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentedControlChanged:" destination="52H-xD-MlX" eventType="valueChanged" id="ICX-wB-dh7"/>
+                                        </connections>
+                                    </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHi-kj-q7f">
-                                        <rect key="frame" x="20" y="20" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="71" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Iuz-DJ-24K"/>
                                         </constraints>
@@ -117,12 +140,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jum-aY-w2d">
-                                        <rect key="frame" x="20" y="90" width="374" height="43"/>
+                                        <rect key="frame" x="20" y="141" width="374" height="43"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpp-yY-MB4">
-                                        <rect key="frame" x="20" y="153" width="374" height="53"/>
+                                        <rect key="frame" x="20" y="204" width="374" height="53"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <state key="normal" title="Search"/>
                                         <connections>
@@ -130,13 +153,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Nenhum valor encontrado." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFa-jf-h8J">
-                                        <rect key="frame" x="20" y="226" width="374" height="33.5"/>
+                                        <rect key="frame" x="20" y="277" width="374" height="33.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LiK-Xc-Kfg">
-                                        <rect key="frame" x="20" y="279.5" width="374" height="33.5"/>
+                                        <rect key="frame" x="20" y="330.5" width="374" height="33.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Value:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NW-lf-Ul1">
                                                 <rect key="frame" x="0.0" y="0.0" width="73" height="33.5"/>
@@ -167,8 +190,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" image="magnifyingglass" catalog="system" id="Cdd-bu-WhW"/>
                     <connections>
+                        <outlet property="labelFileContent" destination="VMa-NI-kK0" id="B5g-sy-8wq"/>
+                        <outlet property="labelKey" destination="tHi-kj-q7f" id="GYu-OT-Jxf"/>
                         <outlet property="labelNoValue" destination="vFa-jf-h8J" id="lku-t2-zut"/>
-                        <outlet property="labelValue" destination="VMa-NI-kK0" id="ip3-Rg-NbT"/>
+                        <outlet property="labelValue" destination="1NW-lf-Ul1" id="Zr4-Xg-RNk"/>
+                        <outlet property="segmentedControl" destination="bKO-8h-uUp" id="xHg-op-cgg"/>
                         <outlet property="stackViewValue" destination="LiK-Xc-Kfg" id="t3W-OF-Ney"/>
                         <outlet property="textFieldKey" destination="jum-aY-w2d" id="uVb-5f-Ldi"/>
                     </connections>
